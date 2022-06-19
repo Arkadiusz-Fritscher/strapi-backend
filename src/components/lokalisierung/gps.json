@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_lokalisierung_gps",
+  "info": {
+    "displayName": "GPS",
+    "icon": "map-marked-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "lat": {
+      "type": "float",
+      "required": true,
+      "max": 99.9999999999999,
+      "min": -99.9999999999999
+    },
+    "lng": {
+      "type": "float",
+      "required": true,
+      "max": 99.9999999999999,
+      "min": -99.9999999999999
+    }
+  }
+}

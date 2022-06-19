@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "objects",
+  "info": {
+    "singularName": "object",
+    "pluralName": "objects",
+    "displayName": "object",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "barcode": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "^[a-zA-Z0-9]*$"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Armaturenschacht",
+        "Kontrollschacht",
+        "Schauloch"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "lovion_id": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "gps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "lokalisierung.gps",
+      "required": true
+    }
+  }
+}
